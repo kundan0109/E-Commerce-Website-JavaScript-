@@ -1,0 +1,91 @@
+:root {
+  --primary-brand-color: #000;
+  --common-padding: 0 8vw;
+  font-size: 16px;
+}
+
+.product-section {
+  background-color: rgb(247, 242, 242);
+  display: flex;
+  margin: 6rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.product-img {
+  width: 36%;
+  height: 25rem;
+  display: flex;
+  object-fit: contain;
+  background-color: #d7d0d0;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* title */
+.product-details p:nth-of-type(1) {
+  font-family: "Satoshi", sans-serif;
+  color: black;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 1rem;
+}
+
+/* price */
+.product-details p:nth-of-type(2) {
+  font-family: "Satoshi", sans-serif;
+  color: rgb(1, 1, 1);
+  font-size: 1.5rem;
+  padding: 1rem;
+
+}
+
+
+/* Description */
+.product-details p:nth-of-type(3) {
+  font-family: "Satoshi", sans-serif;
+  color: rgb(82, 82, 82);
+  font-size: 1.1rem;
+  padding: 1rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ********************************************* */
+.rating {
+  font-size: 1.9rem; /* Adjust size for the product details */
+  display: grid;
+  grid-template: "full" 1fr / 1fr;
+  position: relative;
+  width: fit-content;
+  padding-left: 1rem;
+
+  &::before {
+    grid-area: full;
+    width: calc((var(--rating, 0) / 5) * 100%);
+    overflow: hidden;
+    white-space: nowrap;
+    content: "★★★★★";
+    color: #ffd700;
+  }
+
+  &::after {
+    grid-area: full;
+    white-space: nowrap;
+    content: "☆☆☆☆☆";
+    color: rgb(81, 79, 79);
+  }
+}
